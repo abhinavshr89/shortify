@@ -1,7 +1,9 @@
 import express from "express";
-import Url from "../models/Url";
+import Url from "../models/Url.js";
 
 const router = express.Router();
+
+
 
 router.post("/shorten-url", async (req, res) => {
     try {
@@ -17,7 +19,7 @@ router.post("/shorten-url", async (req, res) => {
         const url = new Url({ randomKey, originalUrl: longUrl });
         await url.save();
 
-        const shortUrl = `http:localhost:3000/${randomKey}`;
+        const shortUrl = `http://localhost:3001/${randomKey}`;
         return res.status(200).json({ shortUrl });
     } catch (error) {
         console.error("Error shortening URL:", error);
@@ -25,7 +27,7 @@ router.post("/shorten-url", async (req, res) => {
     }
 });
 
-router.post("/:key", async (req, res) => {
+router.get("/:key", async (req, res) => {
     try {
         const { key } = req.params;
         const url = await Url.findOne({ randomKey: key });
