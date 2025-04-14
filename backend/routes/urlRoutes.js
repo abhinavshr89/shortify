@@ -19,7 +19,7 @@ router.post("/shorten-url", async (req, res) => {
         const url = new Url({ randomKey, originalUrl: longUrl });
         await url.save();
 
-        const shortUrl = `http://localhost:3001/${randomKey}`;
+        const shortUrl = `https://shortify-a6wl.onrender.com/${randomKey}`;
         return res.status(200).json({ shortUrl });
     } catch (error) {
         console.error("Error shortening URL:", error);
