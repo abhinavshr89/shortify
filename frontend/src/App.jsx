@@ -43,7 +43,7 @@ export default function App() {
       <div className="font-clash max-sm:text-[35px] text-[80px] text-center sm:leading-[100px]">
         Shrink. Share. Simplify.
       </div>
-      <div className="font-poppins text-[30px]  max-sm:text-[15px] text-center">
+      <div className="font-poppins text-[30px]  max-sm:text-[15px] text-center px-[10px]">
         Paste your long URL and get a clean, shareable link in seconds.
       </div>
       <form
