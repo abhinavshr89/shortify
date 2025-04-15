@@ -40,8 +40,11 @@ export default function App() {
   return (
     <div className="h-screen bg-hero-pattern bg-cover text-white flex items-center justify-center flex-col gap-0">
       <Toaster position="top-right" reverseOrder={false} />
-      <div className="font-clash text-[80px] max-sm:font-[20px] text-center leading-[100px]">
+      <div className="font-clash max-sm:text-[35px] text-[80px] text-center leading-[100px]">
         Shrink. Share. Simplify.
+      </div>
+      <div className="font-poppins text-[20px]  ">
+        Paste your long URL and get a clean, shareable link in seconds.
       </div>
       <form
         onSubmit={handleSubmit}
